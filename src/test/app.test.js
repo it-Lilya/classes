@@ -1,6 +1,5 @@
 import { Character } from '../app';
 
-// eslint-disable-next-line consistent-return
 test('name in object', () => {
   const obj = new Character('Bobik');
   const received = obj.name;
