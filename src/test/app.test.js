@@ -1,11 +1,13 @@
 import { Character } from '../app';
 
 test('name in object', () => {
-  const obj = new Character('Bobik');
-  const received = obj.name;
-  let expected;
-  if (received.length > 2 && received.length < 10) {
-    return expected;
-  }
+  const received = new Character('B', 'Bowerman');
+  const expected = 'Ошибка в name'
   expect(received).toEqual(expected);
 });
+
+test('type in object', () => {
+  const received = new Character('Boo', 'bowerman');
+  const expected = 'Ошибка в types'
+  expect(received).toEqual(expected);
+})
