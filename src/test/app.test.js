@@ -1,12 +1,19 @@
 import { Character } from '../app';
 
-test('properties in app', () => {
-  const received = new Character('Boo', 'Bowerman');
-  const expected = {
-    name: 'Boo',
-    type: 'Bowerman',
-    health: 100,
-    level: 1,
+test('name in app', () => {
+  try {
+    new Character('B', 'Bowerman');
+  } catch(err) {
+    expect(err.message).toBe('Ошибка в name')
   }
-  expect(received).toEqual(expected);
-});
+}
+)
+
+test('type in app', () => {
+  try {
+    new Character('Boo', 'bowerman');
+  } catch(err) {
+    expect(err.message).toBe('Ошибка в type')
+  }
+}
+)

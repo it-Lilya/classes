@@ -1,15 +1,17 @@
 export class Character {
   constructor(name, type) {
-    let types = ['Bowerman', 'Deamon', 'Magician', 'Swordsman', 'Undead', 'Zombie'];
+    const types = ['Bowerman', 'Deamon', 'Magician', 'Swordsman', 'Undead', 'Zombie'];
 
-     if(name.length < 2 || name.length > 100 || typeof (name) !== 'string') {
-      throw new Error('Ошибка в name');
+    if(name.length < 2 || name.length > 100 || typeof (name) !== 'string') {
+      const err = new Error('Ошибка в name');
+      return err;
     } else {
       this.name = name;
     }
 
     if(!types.includes(type)) {
-      throw new Error('Ошибка в types');
+      const err = new Error('Ошибка в type');
+      return err;
     } else {
       this.type = type;
     }
