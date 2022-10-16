@@ -3,15 +3,13 @@ export class Character {
     const types = ['Bowerman', 'Deamon', 'Magician', 'Swordsman', 'Undead', 'Zombie'];
 
     if(name.length < 2 || name.length > 100 || typeof (name) !== 'string') {
-      const err = new Error('Ошибка в name');
-      return err;
+      return new Error('Ошибка в name');
     } else {
       this.name = name;
     }
 
     if(!types.includes(type)) {
-      const err = new Error('Ошибка в type');
-      return err;
+      return new Error('Ошибка в type');
     } else {
       this.type = type;
     }
